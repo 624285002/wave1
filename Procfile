@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run piapple.py
+web: sh setup.sh && streamlit run smote.py
