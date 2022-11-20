@@ -7,16 +7,16 @@ import plotly.graph_objects as go
 import pickle
 
 
-st.image('./pic/piapple.jpg')
+st.image('./pic/wel.jpg')
 
 html_8="""
 <div 
-            style="background-color:orange;
+            style="background-color:#fffacd;
             padding:5px;
             border-radius:0px 0px 0px 0px;
             border-style:'solid';
             border-color:white">
-<center><h3>การทำนายโรคสับปะรด ด้วยเทนนิค KNN</h3></center>
+<center><h3>ระบบการตัดสินใจเลือกซื้อเครื่องคอมพิวเตอร์โน้ตบุ๊ค ด้วยเทนนิค KNN</h3></center>
 </div>
 """
 
@@ -36,12 +36,12 @@ dx2=pd.DataFrame(dx,index=["d1","d2","d3","d4","d5","d6"])
 
 
 html_8="""
-<div style="background-color:orange;
+<div style="background-color:#fffacd;
             padding:5px;
             border-radius:0px 0px 0px 0px;
             border-style:'solid';
             border-color:white">
-<center><h3>กรอกข้อมูลเพื่อทำนายโรค</h3></center>
+<center><h3>กรอกข้อมูลการตัดสินใจเลือกซื้อ</h3></center>
 </div>
 """
 
@@ -62,18 +62,18 @@ if st.button("ทำนายผล"):
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction)
-    if prediction == 'top rot':
-        st.image('./pic/top rot.jpg')
-    elif prediction == 'withered':
-        st.image('./pic/withered.jpg')
-    elif prediction == 'withered':
-        st.image('./pic/withered.jpg')
-    elif prediction == 'withered':
-        st.image('./pic/withered.jpg')
-    elif prediction == 'withered':
-        st.image('./pic/withered.jpg')
+    if prediction == 'Acer':
+        st.image('./pic/AC.jpg')
+    elif prediction == 'Asus':
+        st.image('./pic/AS.jpg')
+    elif prediction == 'Dell':
+        st.image('./pic/D.jpg')
+    elif prediction == 'HP':
+        st.image('./pic/H.jpg')
+    elif prediction == 'Lenovo':
+        st.image('./pic/L.jpg')
     else:
-        st.image('./pic/normal.jpg')
+        st.image('./pic/M.jpg')
 else:
     st.write("")
 
