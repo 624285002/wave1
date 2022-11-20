@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import pickle
 
 
-st.image('./pic/wel.jpg')
+st.image('./pic/welcome.jpg')
 
 html_8="""
 <div 
